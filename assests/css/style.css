@@ -994,10 +994,10 @@ button {
     align-items: center;
     background: white;
     padding: 22px 28px;
-    border-radius: 14px;
     font-size: 20px;
     font-weight: 500;
     box-shadow: 0 0 0 transparent;
+    
 }
 
 .icon {
