@@ -1,12 +1,4 @@
-const header = document.querySelector('.header');
 
-window.addEventListener('scroll', function () {
-    if (window.scrollY > 200) {
-        header.classList.add('scrolled');
-    } else {
-        header.classList.remove('scrolled');
-    }
-});
 
 
   
@@ -27,10 +19,10 @@ document.addEventListener("DOMContentLoaded", () => {
 let swiperProjects = new Swiper(".home-projects22", {
       spaceBetween: 20,
       slidesPerView: 3,
-      // autoplay: {
-      //   delay: 2500,
-      //   disableOnInteraction: false,
-      // },
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
       breakpoints: {
       320: { slidesPerView: 1.3 },
       576: { slidesPerView: 2 },
