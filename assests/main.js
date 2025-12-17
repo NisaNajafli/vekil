@@ -15,7 +15,37 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+ document.addEventListener("DOMContentLoaded", () => {
+            const tabs = document.querySelectorAll(".about-tab");
+            const contents = document.querySelectorAll(".about-switch-list");
 
+            tabs.forEach(tab => {
+                tab.addEventListener("click", () => {
+                    const target = tab.dataset.tab;
+
+                    tabs.forEach(t => t.classList.remove("active"));
+                    tab.classList.add("active");
+
+                    contents.forEach(c => {
+                        c.classList.toggle("is-active", c.dataset.content === target);
+                    });
+                });
+            });
+        });
+        
+                            let text = document.querySelector('.keywords').innerText;
+
+                            let arr = text.split(',').map(el => el.trim()).filter(el => el.length > 0);
+
+                            let container = document.querySelector('.smallPostBoxs');
+                            container.innerHTML = ''; 
+
+                            arr.forEach(el => {
+                                let span = document.createElement('span');
+                                span.textContent = el;
+                                span.classList.add('keyword-item'); 
+                                container.appendChild(span);
+                            });
 let swiperProjects = new Swiper(".home-projects22", {
       spaceBetween: 20,
       slidesPerView: 3,
