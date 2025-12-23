@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="/assests/css/reset.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link rel="stylesheet" href="/assests/css/style.css">
@@ -101,69 +102,59 @@
                     <li class="breadcrumb__item">
                         <a href="/">Главная</a>
                     </li>
-                    <li class="breadcrumb__item breadcrumb__item--current">
+                    <li class="breadcrumb__item">
                         <a href="/services.html">Услуги</a>
+                    </li>
+                     <li class="breadcrumb__item breadcrumb__item--current">
+                        <a href="/serviceinner.html">Экономические споры</a>
                     </li>
                 </ol>
             </div>
         </div>
-        <section class="services_section services-page" aria-label="Список юридических услуг">
-            <div id="bxdynamic_jmonnO_start" style="display:none"></div>
-
+        <section class="service-inner">
             <div class="container">
-                <div class="services_section-grid">
+            <div class="service-inner__hero">
+            <div class="service-inner__image">
+                <img src="/assests/img/service1.webp"
+                    alt="Экономические споры">
+            </div>
 
-                    <div class="main-page__card">
-                        <a class="press-card" href="/serviceinner.html" title="Банкротство" aria-label="Банкротство">
-                            <div class="press-card__hover">
-                                <svg class="press-card__bg" width="165" height="279" viewBox="0 0 165 279" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M165 70.3319L0 0V279H165V70.3319Z" fill="url(#paint0_linear_1039_3966)">
-                                    </path>
-                                    <defs>
-                                        <linearGradient id="paint0_linear_1039_3966" x1="82.5" y1="0" x2="82.5" y2="279"
-                                            gradientUnits="userSpaceOnUse">
-                                            <stop stop-color="#C9ECDB" stop-opacity="0.15"></stop>
-                                            <stop offset="1" stop-color="#C0EACF" stop-opacity="0"></stop>
-                                        </linearGradient>
-                                    </defs>
-                                </svg>
-                            </div>
+            <div class="service-inner__overlay"></div>
 
-                            <div class="press-card__content">
-                                <div class="press-card__top">
-                                    <div class="press-card__container">
-                                        <div class="press-card__title">Экономические споры</div>
-                                        <div class="press-card_desc">
-                                            Cпоры о заключении, изменении, расторжении договоров; 
-                                            O недействительности сделок; 
-                                            O неисполнении, ненадлежащем исполнении договоров; 
-                                            O возмещении причиненного вреда, взыскании неосновательного обогащения; 
-                                            банкротство; корпоративные споры; 
-                                            споры с участием иностранных лиц; 
-                                            споры с государственными органами; 
-                                            иные категории экономических споров
-                                        </div>
-                                    </div>
-                                </div>
+            <div class="container service-inner__content">
+                <h1 class="service-inner__title">
+                Экономические споры
+                </h1>
+            </div>
+            </div>
 
-                                <div class="press-card__bot">
-                                    <div class="press-card__wrapper">
-                                        <div class="press-card__date">
-                                            <div class="press-card__text">Подробнее</div>
-                                        </div>
-                                        <div class="press-card__icon">
-                                            <svg class="press-card__svg" width="12" height="12" viewBox="0 0 12 12"
-                                                fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M1.5 3.75L6 8.25L10.5 3.75" stroke="white" stroke-width="1.5">
-                                                </path>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
+
+            <div class="service-inner__body">
+            <div class="container">
+                <div class="service-inner__desc">                         
+                <ul>
+                    <li>Cпоры о заключении, изменении, расторжении договоров; </li>
+                    <li> O недействительности сделок;</li>
+                    <li>O неисполнении, ненадлежащем исполнении договоров; </li>
+                    <li>O возмещении причиненного вреда, взыскании неосновательного обогащения;</li>
+                    <li>банкротство; корпоративные споры; </li>
+                    <li>споры с участием иностранных лиц; </li>
+                    <li>споры с государственными органами; </li>
+                    <li>иные категории экономических споров</li>                           
+                </ul>
+                </div>
+            </div>
+            </div>
                     </div>
+
+        </section>
+        <section class="other-services">
+             <div class="container">
+                <div class="section-top">
+                    <div class="section-title">Другие услуги</div>
+                </div>
+
+                <div class="services_section-grid">
 
                     <div class="main-page__card">
                         <a class="press-card" href="/" title="Реструктуризация долга"
@@ -304,15 +295,10 @@
                     </div>
 
                 </div>
-                </div>
 
             </div>
-
-            <div id="bxdynamic_jmonnO_end" style="display:none"></div>
         </section>
-
-
-    </main>
+        </main>
     <footer>
         <div class="container">
             <div class="footer_logo_and_number">
@@ -487,6 +473,7 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <script src="/assests/main.js"></script>
 
 </body>

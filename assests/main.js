@@ -1,52 +1,62 @@
-
-
-
-  
 document.addEventListener("DOMContentLoaded", () => {
-  new Swiper(".js-hero-slider", {
-    loop: true,
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
-    },
-    navigation: {
-      prevEl: ".swiper-button-prev",
-      nextEl: ".swiper-button-next",
-    }
-  });
-});
- document.addEventListener("DOMContentLoaded", () => {
-            const tabs = document.querySelectorAll(".about-tab");
-            const contents = document.querySelectorAll(".about-switch-list");
 
-            tabs.forEach(tab => {
-                tab.addEventListener("click", () => {
-                    const target = tab.dataset.tab;
+  /* HERO SLIDER */
+  if (document.querySelector(".js-hero-slider")) {
+    new Swiper(".js-hero-slider", {
+      loop: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      navigation: {
+        prevEl: ".swiper-button-prev",
+        nextEl: ".swiper-button-next",
+      },
+    });
+  }
 
-                    tabs.forEach(t => t.classList.remove("active"));
-                    tab.classList.add("active");
+  /* ABOUT TABS */
+  const tabs = document.querySelectorAll(".about-tab");
+  const contents = document.querySelectorAll(".about-switch-list");
 
-                    contents.forEach(c => {
-                        c.classList.toggle("is-active", c.dataset.content === target);
-                    });
-                });
-            });
+  if (tabs.length && contents.length) {
+    tabs.forEach(tab => {
+      tab.addEventListener("click", () => {
+        const target = tab.dataset.tab;
+
+        tabs.forEach(t => t.classList.remove("active"));
+        tab.classList.add("active");
+
+        contents.forEach(c => {
+          c.classList.toggle("is-active", c.dataset.content === target);
         });
-        
-                            let text = document.querySelector('.keywords').innerText;
+      });
+    });
+  }
 
-                            let arr = text.split(',').map(el => el.trim()).filter(el => el.length > 0);
+  /* KEYWORDS PARSE */
+  const keywordsEl = document.querySelector(".keywords");
+  const container = document.querySelector(".smallPostBoxs");
 
-                            let container = document.querySelector('.smallPostBoxs');
-                            container.innerHTML = ''; 
+  if (keywordsEl && container) {
+    const arr = keywordsEl.innerText
+      .split(",")
+      .map(el => el.trim())
+      .filter(Boolean);
 
-                            arr.forEach(el => {
-                                let span = document.createElement('span');
-                                span.textContent = el;
-                                span.classList.add('keyword-item'); 
-                                container.appendChild(span);
-                            });
-let swiperProjects = new Swiper(".home-projects22", {
+    container.innerHTML = "";
+
+    arr.forEach(el => {
+      const span = document.createElement("span");
+      span.textContent = el;
+      span.classList.add("keyword-item");
+      container.appendChild(span);
+    });
+  }
+
+  /* PROJECTS SWIPER */
+  if (document.querySelector(".home-projects22")) {
+    new Swiper(".home-projects22", {
       spaceBetween: 20,
       slidesPerView: 3,
       autoplay: {
@@ -54,10 +64,10 @@ let swiperProjects = new Swiper(".home-projects22", {
         disableOnInteraction: false,
       },
       breakpoints: {
-      320: { slidesPerView: 1.3 },
-      576: { slidesPerView: 2 },
-      768: { slidesPerView: 3 },
-    },
+        320: { slidesPerView: 1.3 },
+        576: { slidesPerView: 2 },
+        768: { slidesPerView: 3 },
+      },
       pagination: {
         el: ".swiper-pagination",
         clickable: true,
@@ -67,4 +77,12 @@ let swiperProjects = new Swiper(".home-projects22", {
         prevEl: ".home-projects22 .swiper-button-prev",
       },
     });
-    document.getElementById("year").textContent = new Date().getFullYear()
+  }
+
+  /* YEAR */
+  const yearEl = document.getElementById("year");
+  if (yearEl) {
+    yearEl.textContent = new Date().getFullYear();
+  }
+
+});
