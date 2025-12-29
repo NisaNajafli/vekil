@@ -86,3 +86,30 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 });
+document.addEventListener("DOMContentLoaded", () => {
+  const openBtn = document.getElementById("open_menu");
+  const closeBtn = document.getElementById("close_menu");
+  const menu = document.querySelector(".mobile__menu");
+  const overlay = document.getElementById("menu_overlay");
+  const menuLinks = document.querySelectorAll(".mobile__menu a");
+
+  function openMenu() {
+    menu.classList.add("is-open");
+    overlay.classList.add("is-active");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeMenu() {
+    menu.classList.remove("is-open");
+    overlay.classList.remove("is-active");
+    document.body.style.overflow = "";
+  }
+
+  openBtn.addEventListener("click", openMenu);
+  closeBtn.addEventListener("click", closeMenu);
+  overlay.addEventListener("click", closeMenu);
+
+  menuLinks.forEach(link => {
+    link.addEventListener("click", closeMenu);
+  });
+});
