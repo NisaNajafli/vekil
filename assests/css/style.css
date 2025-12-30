@@ -44,7 +44,9 @@
   z-index: 999999;
 }
 .modal-form button{
-  border: 1px solid #333
+  border: 1px solid #333;
+  background-color: var(--light-blue);
+  color: #fff
 }
 .custom-modal {
   position: fixed;
@@ -1604,6 +1606,9 @@ cubic-bezier(0.33, 1, 0.68, 1);
   -webkit-line-clamp: 1;
   line-clamp: 1;
 }
+/* #swiper-wrapper-510f1cca73ff01a52{
+  transform: translate(0, 0) !important;
+} */
 .projects-card__hover {
   width: 100%;
   height: 100%;
@@ -2831,13 +2836,14 @@ footer .socials span {
 }
 .service-inner__hero {
   position: relative;
-  height: 570px;
+  height: 435px;
   overflow: hidden;
 }
 
 .service-inner__image {
   position: absolute;
   inset: 0;
+  height: 435px;
 }
 
 .service-inner__image img {
@@ -2868,6 +2874,8 @@ footer .socials span {
 
 .service-inner__body {
   padding: 30px 0;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding: 25px;
 }
 
 .service-inner__desc li {
@@ -2892,7 +2900,7 @@ footer .socials span {
 .service-inner__grid {
   display: grid;
   grid-template-columns: auto 380px;
-  gap: 10px;
+  gap: 40px;
   align-items: flex-start;
 }
 
@@ -2909,7 +2917,7 @@ footer .socials span {
 /* FORM */
 .service-form {
   position: sticky;
-  top: 100px;
+  top: 150px;
   background: var(--blue);
   padding: 30px;
   border-radius: var(--br);
