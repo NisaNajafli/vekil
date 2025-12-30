@@ -10,6 +10,39 @@
     <title>ГЕОРГИЙ БУХОВ</title>
 </head>
 <body>
+  <div class="modal-overlay" data-modal-overlay></div>
+
+<div class="custom-modal" data-modal>
+  <button class="modal-close" data-modal-close>&times;</button>
+
+  <h2 class="modal-title">Оставить заявку</h2>
+  <p class="modal-text">
+    Заполните форму, и наш специалист свяжется с вами в ближайшее время.
+  </p>
+
+  <form class="modal-form">
+    <div class="form-group">
+      <label>Имя</label>
+      <input type="text" placeholder="Ваше имя" required>
+    </div>
+
+    <div class="form-group">
+      <label>Tелефон</label>
+      <input type="tel" placeholder="Ваше телефона" required>
+    </div>
+
+    <div class="form-group">
+      <label>Сообщение</label>
+      <textarea placeholder="Введите сообщение" rows="4"></textarea>
+    </div>
+
+    <button type="submit" class="header__box">
+      <span class="header__box-span">
+        <span class="header__box-hover">Отправить</span>
+      </span>
+    </button>
+  </form>
+</div>
     <header class="header header--main">
       <div class="header__wrapper">
         <div class="container">
@@ -32,7 +65,7 @@
                       <a class="header__link" href="/about.html">Обо мне</a>
                     </li>
                     <li class="header__item">
-                      <a class="header__link" href="/services.html">Услуги</a>
+                      <a class="header__link" href="/services.html">Практики</a>
                     </li>
                     <li class="header__item">
                       <a class="header__link" href="/fee.html">Гонорар</a>
@@ -71,7 +104,7 @@
                   <div id="bxdynamic_YscOAb_end" style="display: none"></div>
                       </li>
                     </ul>
-                    <div class="header__buttons" onclick="openModal()">
+                    <div class="header__buttons" data-modal-open>
                       <a class="header__button" href="#">
                         <div class="header__box">
                           <span class="header__box-span">
@@ -152,7 +185,7 @@
               <a class="header__link" href="/about.html">Обо мне</a>
             </li>
             <li class="header__item">
-              <a class="header__link" href="/services.html">Услуги</a>
+              <a class="header__link" href="/services.html">Практики</a>
             </li>
             <li class="header__item">
               <a class="header__link" href="/fee.html">Гонорар</a>
@@ -260,10 +293,7 @@
 
                             <div data-aos="fade-up" class="about-info-buttons aos-init aos-animate">
                                 <a href="" class="button">
-                                    <span>О компании</span>
-                                </a>
-                                <a href="" class="button button-white">
-                                    <span>Смотреть нашу команду</span>
+                                    <span>Подробнее</span>
                                 </a>
                             </div>
                         </div>
@@ -361,11 +391,11 @@
 
             <div class="container">
                 <div class="section-top">
-                    <div class="section-title">Услуги</div>
+                    <div class="section-title">Практики</div>
 
                     <div class="only-desktop">
                         <a href="/services.html" class="button">
-                            <span class="text">Все услуги</span>
+                            <span class="text">Все Практики</span>
                         </a>
                     </div>
                 </div>
@@ -517,8 +547,8 @@
                     </div>
 
                     <div class="main-page__card">
-                        <a class="press-card" href="/" title="Все юридические услуги"
-                            aria-label="Все юридические услуги">
+                        <a class="press-card" href="/" title="Все юридические Практики"
+                            aria-label="Все юридические Практики">
                             <div class="press-card__hover">
                                 <svg class="press-card__bg" width="165" height="279" viewBox="0 0 165 279" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -566,7 +596,7 @@
 
                 <div class="only-mobile">
                     <a href="/services.html" class="button">
-                        <span class="text">Все услуги</span>
+                        <span class="text">Все Практики</span>
                     </a>
                 </div>
 
@@ -750,7 +780,7 @@
           </div>
            <div class="only-mobile container">
                     <a href="/blogs.html" class="button">
-                        <span class="text">Все услуги</span>
+                        <span class="text">Все Практики</span>
                     </a>
                 </div>
         </section>
@@ -779,7 +809,7 @@
                   Готов помочь вам в решении юридических вопросов. Свяжитесь со мной для получения профессиональной поддержки.
               </p>
             </div>
-            <button class="button-ui cross disableBodyScroll" data-btn="contact-us">
+            <button class="button-ui cross disableBodyScroll" data-btn="contact-us" data-modal-open>
               <span class="button-ui__text"> Оставить заявку </span>
               <span class="button-ui__arrow">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -807,14 +837,14 @@
                 <div class="line"></div>
                 <div class="footer-nav">
                 <div class="footer-nav__inner">
-                  <div class="footer-col">
+                  <div class="footer-col col1">
                     <h3>ГЕОРГИЙ БУХОВ</h3>
                     <ul>
                       <li>
                       <a href="/about.html">Обо мне</a>
                     </li>
                     <li >
-                      <a href="/services.html">Услуги</a>
+                      <a href="/services.html">Практики</a>
                     </li>
                     <li>
                       <a  href="/fee.html">Гонорар</a>
@@ -823,7 +853,7 @@
                   </div>
 
                   <div class="footer-col">
-                    <h3 id="empty" style="opacity: 0">c</h3>
+                    <h3 class="empty" style="opacity: 0">c</h3>
                     <ul>
                       <li >
                       <a  href="/blogs.html">Статьи</a>
@@ -834,25 +864,37 @@
                     </ul>
                   </div>
 
-                  <div class="footer-col">
-                    <h3>Статьи</h3>
+                  <div class="footer-col col2">
+                    <h3>Практики</h3>
                     <ul>
                       <li><a class="blogsfooter" href="">
-                        Как грамотно защитить свои права при проверках и спорах с государственными органами
+                        Экономические споры
                       </a></li>
                       <li><a class="blogsfooter" href="">
-                        Корпоративные и экономические споры: типичные ошибки бизнеса и как их избежать
+                        Корпоративное право
+                      </a></li>
+                      <li><a class="blogsfooter" href="">
+                        Исполнительное производство
+                      </a></li>
+                      <li><a class="blogsfooter" href="">
+                        Договорное право
                       </a></li>
                     </ul>
                   </div>
                   <div class="footer-col">
-                    <h3 style="opacity: 0">c</h3>
+                    <h3 class="empty" style="opacity: 0">c</h3>
                     <ul>
                       <li><a class="blogsfooter" href="">
-                        Корпоративные и экономические споры: типичные ошибки бизнеса и как их избежать
+                        Экономические споры
                       </a></li>
                       <li><a class="blogsfooter" href="">
-                        Договорное право без рисков: ключевые нюансы, о которых должен знать каждый предприниматель
+                        Корпоративное право
+                      </a></li>
+                      <li><a class="blogsfooter" href="">
+                        Исполнительное производство
+                      </a></li>
+                      <li><a class="blogsfooter" href="">
+                        Договорное право
                       </a></li>
                     </ul>
                   </div>
