@@ -4,10 +4,10 @@ document.addEventListener("DOMContentLoaded", () => {
   if (document.querySelector(".js-hero-slider")) {
     new Swiper(".js-hero-slider", {
       loop: true,
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-      },
+      // autoplay: {
+      //   delay: 3000,
+      //   disableOnInteraction: false,
+      // },
       navigation: {
         prevEl: ".swiper-button-prev",
         nextEl: ".swiper-button-next",
