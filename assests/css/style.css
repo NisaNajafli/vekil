@@ -2030,8 +2030,8 @@ footer .line {
 
 .footer-nav__inner {
   display: grid;
-  gap: 28px 48px;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 28px 20px;
+  grid-template-columns: repeat(5, auto);
 }
 
 .footer__content {
@@ -2047,9 +2047,11 @@ footer .line {
 }
 
 .footer-col ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 .footer-col li + li {
@@ -2265,7 +2267,11 @@ footer .socials span {
   padding: 15px;
 
 }
-
+.about-tab button{
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
 .about-tab {
   flex: 1;
   padding: 15px 20px;
@@ -2276,6 +2282,9 @@ footer .socials span {
   border: none;
   cursor: pointer;
   transition: background 0.25s ease, color 0.25s ease;
+}
+.about-tab:hover button{
+  color: #fff
 }
 
 .about-tab:not(:last-child) {
