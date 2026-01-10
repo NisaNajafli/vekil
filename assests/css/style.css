@@ -28,7 +28,14 @@
   cursor: pointer;
   transition: 0.3s;
 }
-
+.form-checkbox{
+  display: flex;
+  align-items: center
+}
+.form-checkbox a{
+  color: var(--blue);
+  font-weight: 600;
+}
 .btn-open-modal:hover {
   background: #333;
   color: #fff;
@@ -347,7 +354,7 @@ a {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -1px;
+  bottom: -6px;
   z-index: 1;
   width: 28.4375rem;
   height: 1px;
@@ -368,7 +375,7 @@ a {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: -1px;
+  bottom: -6px;
   z-index: -2;
   height: 1px;
   border-bottom: 1px dashed hsla(0, 0%, 100%, 0.4);
@@ -377,6 +384,9 @@ a {
 .header__row {
   display: flex;
   align-items: center;
+}
+.header__col.logo{
+  width: 100px;
 }
 
 .header__box {
@@ -1408,8 +1418,18 @@ ease infinite;
     stroke: #fff
 }
 
+.serviceform .form-checkbox input{
+  width: 18px;
+  height: 13px;
 
-
+}
+.serviceform .form-checkbox{
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+.serviceform .form-checkbox  a{
+  color: var(--grey)
+}
 .services_section .press-card__hover , .other-services .press-card__hover {
     position: absolute;
     left: 0;
@@ -1720,7 +1740,7 @@ cubic-bezier(0.33, 1, 0.68, 1);
 }
 
 .projects-card .title-32 {
-  margin-bottom: 1.5rem;
+  margin-bottom: 10px;
   text-align: left;
   display: -moz-box;
   display: -webkit-box;
@@ -1788,8 +1808,9 @@ cubic-bezier(0.33, 1, 0.68, 1);
   align-items: center;
   justify-content: space-between;
   padding: 0.4375rem 0.75rem 0.4375rem 1.75rem;
-  background: linear-gradient(90deg, var(--blue), var(--grey));
-  color: #fff;
+  background: #fff;
+  color: #333;
+  
   gap: 1.75rem;
   width: max-content;
   cursor: pointer;
@@ -1798,7 +1819,7 @@ cubic-bezier(0.33, 1, 0.68, 1);
 
 .button-ui__text {
   display: inline-block;
-  color: #fff;
+  color: #333;
   font-size: 1.25rem;
   font-weight: 400;
   letter-spacing: -0.2px;
@@ -1813,8 +1834,10 @@ cubic-bezier(0.33, 1, 0.68, 1);
   width: 2.75rem;
   height: 2.75rem;
   flex-shrink: 0;
+  border: 1px solid #333;
   background-color: #fff;
   border-radius: 80%;
+
   transition: 0.5s cubic-bezier(0.33, 1, 0.68, 1);
 }
 
@@ -1910,7 +1933,7 @@ footer {
     /* white-space: nowrap; */
     /* overflow: hidden; */
     /* text-overflow: ellipsis; */
-    width: 325px;
+    max-width: 325px;
 }
 footer .logo img{
     
@@ -2075,8 +2098,10 @@ footer .adress a:hover, footer .links a:hover {
 }
 
 footer .socials div {
-    display:flex;
+    display: flex;
     gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 footer .socials a:hover {
@@ -2421,14 +2446,16 @@ footer .socials span {
 }
 .about-reviews {
     display: flex;
-    gap: 20px;
     padding: 0;
     margin-top: 40px;
     margin-bottom: 40px;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
 }
 
+.about-reviews-items{
+  display: flex;
+  gap: 10px;
+}
 .about-reviews-item {
     flex: 1;
     min-width: 200px;
@@ -2440,19 +2467,15 @@ footer .socials span {
     flex-direction: column;
     padding: 30px;
     background: #fff;
-    border-radius: 12px;
+    border: 1px solid rgba(19, 34, 57, 0.12);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 14px;
     transition: all 0.3s ease;
     text-decoration: none;
     height: 100%;
     align-items: center;
     justify-content: center;
     gap: 15px;
-}
-
-.about-reviews-item-wrap:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
 }
 
 .about-reviews-logo {
@@ -2476,19 +2499,14 @@ footer .socials span {
     align-items: center;
     justify-content: center;
 }
-
-.about-reviews-stars img {
-    max-width: 100%;
-    height: auto;
-    object-fit: contain;
-    max-height: 20px;
+.about-reviews-stars svg{
+  height: 20px;
+  width: 20px;
 }
+
 
 /* Responsive */
 @media (max-width: 768px) {
-    .about-reviews {
-        gap: 10px;
-    }
 
     .about-reviews-item {
         flex: 1;
@@ -2682,7 +2700,7 @@ footer .socials span {
     margin-bottom: .625rem;
     color: #97A1BB;
 }
-.contact-page-hero-right a{
+.contact-page-hero-right a, .contact-page-hero-right .pinnerp{
     letter-spacing: .01em;
     font-size: 21px;
     color: var(--text-black)
@@ -2765,8 +2783,8 @@ footer .socials span {
   gap: 8px;
 }
 .qs-icons a svg{
-  width: 30px;
-  height: 30px;
+  width: 28px;
+  height: 28px;
 }
 .qs-right {
     width: 60%;
@@ -2875,19 +2893,21 @@ footer .socials span {
 .blog_filter_box h3:before {
     position: absolute;
     content: "";
-    width: 30px;
+    width: 100px;
     border-bottom: 3px solid var(--blue);
     bottom: 0;
     left: 0;
 }
-
+.fs-1{
+  margin-bottom: 10px;
+}
 .blog_filter_box h3:after {
     position: absolute;
     content: "";
-    width: 5px;
+    width: 6px;
     border-bottom: 3px solid var(--blue);
     bottom: 0;
-    left: 35px;
+    left: 115px;
 }
 
 .blog_filter_list {
@@ -2906,6 +2926,7 @@ footer .socials span {
     padding: 10px 0;
     cursor: pointer;
     transition: 0.5s ease-in-out;
+    font-size: 10px;
 }
 
 .blog_filter_list li a {
@@ -2925,6 +2946,7 @@ footer .socials span {
     color: #333;
     font-weight: 500;
     text-align: justify;
+    font-size: 16px;
 }
 .check_desc ul li::marker {
     content: "\2713";
@@ -2956,6 +2978,12 @@ footer .socials span {
     width: 100%;
     height: 400px;
     margin-bottom: 20px;
+}
+.date{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: rgb(134, 135, 136)
 }
 
 .left-full > div{
@@ -3289,9 +3317,21 @@ footer .socials span {
 
 .edu-table__wrapper {
   overflow-x: auto;
+  overflow-y: hidden;
   border: 1px solid rgba(19, 34, 57, 0.08);
   border-radius: var(--br);
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
 }
+
+.edu-table__wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.edu-table__table {
+  min-width: 734px;
+}
+
 
 .edu-table__table {
   width: 100%;
@@ -3355,17 +3395,52 @@ footer .socials span {
 ========================= */
 
 
+@media (min-width: 1201px) {
+  .contact-bottom .button-ui {
+    height: 4.25rem;
+  }
+
+  .button-ui:active {
+    background-color: #faf995;
+  }
+
+  .button-ui.cross:hover .button-ui__arrow {
+    background-color: #474e5a;
+  }
+
+  .button-ui.cross:hover .button-ui__arrow svg path {
+    fill: #fff;
+  }
+
+  html {
+    font-size: 0.8333333333vw;
+  }
+}
+
+
+
+
+
+
+
+
+
+
 
 @media (max-width: 1200px) {
   .contact-bottom {
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
   }
-  .about-switch-absolute {
-    position: absolute;
-    left: 11%;
-    top: 23%;
+  .header__buttons, .header__lang {
+    margin-left: 10px;
 }
+.header__item:not(:first-child) {
+    margin-left: 12px;
+}
+
+
+
   .fee-cards {
     grid-template-columns: repeat(2, 1fr);
     gap: 40px;
@@ -3449,41 +3524,6 @@ footer .socials span {
     font-size: 1.125rem;
     line-height: 120%;
   }
-}
-
-@media (min-width: 1201px) {
-  .contact-bottom .button-ui {
-    height: 4.25rem;
-  }
-
-  .button-ui:active {
-    background-color: #faf995;
-  }
-
-  .button-ui.cross:hover .button-ui__arrow {
-    background-color: #474e5a;
-  }
-
-  .button-ui.cross:hover .button-ui__arrow svg path {
-    fill: #fff;
-  }
-
-  html {
-    font-size: 0.8333333333vw;
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-@media (max-width: 1200px) {
    .projects-card__img {
     height: 13.625rem;
     margin-bottom: 1rem;
@@ -3496,17 +3536,15 @@ footer .socials span {
         width: 15px;
         height: 15px;
     }
-  .header__inner {
-    height: 100px;
-  }
-  .header__logo, .header__logo-link {
+  
+  /* .header__logo, .header__logo-link {
     height: 120px;
   }
   .header__logo {
     width: auto;
     -ms-flex-negative: 0;
     flex-shrink: 0;
-  }
+  } */
   #about h2 {
         font-size: 31px
     }
@@ -3615,6 +3653,20 @@ footer .socials span {
    #about h2{
     font-size: 24px;
 }
+.fullArticle_flex {
+  gap: 20px;
+}
+    .leftAll_article {
+        width: 60%;
+        min-width: 60%;
+    }
+.sideBar {
+  width: 40%;
+}
+
+.header__lang{
+  margin-left: 10px;
+}
 .license-card {
     grid-template-columns: 1fr;
     padding: 40px 30px;
@@ -3634,7 +3686,9 @@ footer .socials span {
     justify-content: center;
     flex-wrap: wrap;
   }
-
+.header__inner {
+    height: 100px;
+  }
   .license-image {
     margin-top: 30px;
   }
@@ -3669,11 +3723,7 @@ footer .socials span {
  .tired-wrapper {
         flex-direction: column;
     }
-    .about-switch-absolute {
-        position: absolute;
-        left: 4%;
-        top: 24%;
-    }
+
     .tired-col {
         width: 100%;
         align-items: center;
@@ -3743,7 +3793,7 @@ footer .socials span {
     margin-left: 10px;
 }
     .header__logo, .header__logo-link {
-        height: 110px;
+        height: 100px;
         width: 100px;
     }
     .header__item:not(:first-child) {
@@ -3779,16 +3829,30 @@ footer .socials span {
           .blogs-page-blogs-grid{
   grid-template-columns: 1fr 1fr;
 }
-.leftAll_article {
-    width: 100%;
-    min-width: 70%;
-}
 .contact-page-hero .contact-page-hero-left h2 {
     font-size: 40px;
     }
     .contact-page-hero-right a {
         font-size: 18px;
     }
+    #open_menu svg path{
+  fill: #fff
+}
+.header__links{
+  display: none;
+}
+.header__links.lang, .mobile__menu .header__buttons{
+  display: flex;
+}
+.header__buttons{
+  display: none;
+}
+.burger_btn{
+  margin-left: 20px;
+}
+  #open_menu{
+  display: block;
+}
         }
 
     
@@ -3797,6 +3861,16 @@ footer .socials span {
   .blogs-page-blogs-grid{
   grid-template-columns: 1fr;
 }
+.fullArticle_flex{
+  flex-direction: column;
+}
+.sideBar {
+        width: 100%;
+    }
+        .leftAll_article {
+        width: 100%;
+        min-width: 100%;
+    }
 .blogs-section{
   padding-top: 25px;
 }
@@ -3816,9 +3890,7 @@ footer .socials span {
   font-size: 12px;
   padding: 8px 12px
 }
-  #open_menu{
-  display: block;
-}
+
 .title-32{
   font-size: 16px;
 }
@@ -3858,7 +3930,7 @@ footer .socials span {
         width: 100%;
     }
         .contact-page-hero-right a {
-        font-size: 16px;
+        font-size: 17px;
     }
     .qs-container{
         flex-direction: column;
@@ -4027,10 +4099,10 @@ footer .socials span {
         #about .about-video img {
             width: 100%;}
             .footer-col{
-              width: 300px;
+              width: 100%;
             }
             .copyright{
-              flex-direction: column;
+              flex-direction: column-reverse;
             }
             .empty{
               display: none;
@@ -4039,21 +4111,7 @@ footer .socials span {
     max-width: 200px;
     line-height: 1.4;
 }
-#open_menu svg path{
-  fill: #fff
-}
-.header__links{
-  display: none;
-}
-.header__links.lang, .mobile__menu .header__buttons{
-  display: flex;
-}
-.header__buttons{
-  display: none;
-}
-.burger_btn{
-  margin-left: 20px;
-}
+
 .services_section .press-card__hover, .other-services .press-card__hover {
       transform: translateY(0);
 }
