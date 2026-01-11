@@ -2330,11 +2330,11 @@ footer .socials span {
 }
 .about-tab:hover{
   background: #0e121dad ;
-  color: #fff
+  color: #fff !important
 }
 .about-tab.active {
   background: #0e121d;
-  color: #fff
+  color: #fff !important
 }
 
 
@@ -2456,6 +2456,7 @@ footer .socials span {
 .about-reviews-items{
   display: flex;
   gap: 10px;
+  justify-content: center;
 }
 .about-reviews-item {
     flex: 1;
@@ -2467,10 +2468,10 @@ footer .socials span {
     display: flex;
     flex-direction: column;
     padding: 30px;
-    background: #fff;
-    border: 1px solid rgba(19, 34, 57, 0.12);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 14px;
+    background: #ffffff;
+    border: 1px solid rgb(14 18 29);
+    /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); */
+    border-radius: 0;
     transition: all 0.3s ease;
     text-decoration: none;
     height: 100%;
@@ -2478,7 +2479,6 @@ footer .socials span {
     justify-content: center;
     gap: 15px;
 }
-
 .about-reviews-logo {
     width: 100%;
     height: auto;
