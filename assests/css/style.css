@@ -2894,7 +2894,7 @@ footer .socials span {
 .blog_filter_box h3:before {
     position: absolute;
     content: "";
-    width: 100px;
+    width: 125px;
     border-bottom: 3px solid var(--blue);
     bottom: 0;
     left: 0;
@@ -2902,14 +2902,7 @@ footer .socials span {
 .fs-1{
   margin-bottom: 10px;
 }
-.blog_filter_box h3:after {
-    position: absolute;
-    content: "";
-    width: 6px;
-    border-bottom: 3px solid var(--blue);
-    bottom: 0;
-    left: 115px;
-}
+
 
 .blog_filter_list {
     padding: 0 10px;
